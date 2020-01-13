@@ -1,4 +1,4 @@
-package com.example.wyp;
+package app.test.wyp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AddPhone extends AppCompatActivity {
+public class AddCodeVerify extends AppCompatActivity {
 
     Button btnSiguiente;
     ImageButton btnBack;
@@ -16,7 +16,7 @@ public class AddPhone extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_addphone);
+        setContentView(R.layout.activity_addcodeverify);
 
         btnSiguiente = findViewById(R.id.bntSiguiente);
         btnBack = findViewById(R.id.btnBack);
@@ -24,7 +24,7 @@ public class AddPhone extends AppCompatActivity {
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddPhone.this, AddCodeVerify.class);
+                Intent intent = new Intent(AddCodeVerify.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -32,7 +32,7 @@ public class AddPhone extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddPhone.this, AddGenre.class);
+                Intent intent = new Intent(AddCodeVerify.this, AddPhone.class);
                 startActivity(intent);
             }
         });
@@ -41,3 +41,4 @@ public class AddPhone extends AppCompatActivity {
         getSupportActionBar().hide();
     }
 }
+

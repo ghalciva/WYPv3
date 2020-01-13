@@ -1,4 +1,4 @@
-package com.example.wyp;
+package app.test.wyp;
 
 import org.junit.Test;
 

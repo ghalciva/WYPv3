@@ -1,4 +1,4 @@
-package com.example.wyp;
+package app.test.wyp;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.wyp", appContext.getPackageName());
+        assertEquals("com.test.wyp", appContext.getPackageName());
     }
 }

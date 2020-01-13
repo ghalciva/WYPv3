@@ -1,4 +1,4 @@
-package com.example.wyp;
+package app.test.wyp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AddName extends AppCompatActivity {
+public class AddPhone extends AppCompatActivity {
 
     Button btnSiguiente;
     ImageButton btnBack;
@@ -16,7 +16,7 @@ public class AddName extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_addname);
+        setContentView(R.layout.activity_addphone);
 
         btnSiguiente = findViewById(R.id.bntSiguiente);
         btnBack = findViewById(R.id.btnBack);
@@ -24,7 +24,7 @@ public class AddName extends AppCompatActivity {
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddName.this, AddGenre.class);
+                Intent intent = new Intent(AddPhone.this, AddCodeVerify.class);
                 startActivity(intent);
             }
         });
@@ -32,7 +32,7 @@ public class AddName extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddName.this, MainActivity.class);
+                Intent intent = new Intent(AddPhone.this, AddGenre.class);
                 startActivity(intent);
             }
         });

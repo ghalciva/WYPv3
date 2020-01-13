@@ -6,10 +6,10 @@
         android:color="#ffff" />
 
     <padding
-        android:bottom="10sp"
-        android:left="10sp"
-        android:right="10sp"
-        android:top="10sp" />
+        android:bottom="15sp"
+        android:left="20sp"
+        android:right="30sp"
+        android:top="15sp" />
 
     <corners
         android:radius="10dp" />

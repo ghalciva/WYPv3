@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.wyp">
+    package="app.test.wyp">
 
     <application
         android:allowBackup="true"
@@ -9,12 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".AddName"/>
-        <activity android:name=".AddGenre"/>
-        <activity android:name=".AddPhone"/>
-        <activity android:name=".AddCodeVerify"/>
-        <activity android:name=".SplashActivity">
+        <activity android:name="app.test.wyp.MainActivity"/>
+        <activity android:name="app.test.wyp.AddName"/>
+        <activity android:name="app.test.wyp.AddGenre"/>
+        <activity android:name="app.test.wyp.AddPhone"/>
+        <activity android:name="app.test.wyp.AddCodeVerify"/>
+
+        <activity android:name="app.test.wyp.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
