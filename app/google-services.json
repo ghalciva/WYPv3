@@ -1,37 +1,21 @@
 {
   "project_info": {
-    "project_number": "722251559568",
-    "firebase_url": "https://wypfirebaseproject.firebaseio.com",
-    "project_id": "wypfirebaseproject",
-    "storage_bucket": "wypfirebaseproject.appspot.com"
+    "project_number": "1037537162526",
+    "firebase_url": "https://wypfirebase.firebaseio.com",
+    "project_id": "wypfirebase",
+    "storage_bucket": "wypfirebase.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:722251559568:android:c6a83c23c742fc01a89e15",
+        "mobilesdk_app_id": "1:1037537162526:android:39b88b3d0ad23a9e7d050f",
         "android_client_info": {
           "package_name": "app.test.wyp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "722251559568-gr0ttopom1v8avipelee4dr5sfrruuc8.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "app.test.wyp",
-            "certificate_hash": "fa30c586cb1aa72667c83b31ca37ac5a3794c153"
-          }
-        },
-        {
-          "client_id": "722251559568-hn843mqeaq6591ln8sgedbh3i3klphnb.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "app.test.wyp",
-            "certificate_hash": "135a711599033f62fff64cf025b7e5436f44409b"
-          }
-        },
-        {
-          "client_id": "722251559568-5p5510avp191so0g3vvk8tc53h3kfmgj.apps.googleusercontent.com",
+          "client_id": "1037537162526-9kr3386e44nh06e3gqehslpk8mii8v84.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "app.test.wyp",
@@ -39,20 +23,36 @@
           }
         },
         {
-          "client_id": "722251559568-sbmfffrrd846q9mep5mp57jisj6vdtoe.apps.googleusercontent.com",
+          "client_id": "1037537162526-t5gnpvh6unf3eql8vcsd4rp6ml9b4l2o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.test.wyp",
+            "certificate_hash": "135a711599033f62fff64cf025b7e5436f44409b"
+          }
+        },
+        {
+          "client_id": "1037537162526-fm9l9j8fvnei0hthc4oqoivq8fparp0f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.test.wyp",
+            "certificate_hash": "fa30c586cb1aa72667c83b31ca37ac5a3794c153"
+          }
+        },
+        {
+          "client_id": "1037537162526-2t1s5uc3i37ukbuqvdgkevav92t8dfc0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAT6L1DjZIEfiiqTLTl38ESo9qJWvNaBHw"
+          "current_key": "AIzaSyAPxx5s9egD4ugWL8IQlt_4vfbX59fm_aY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "722251559568-sbmfffrrd846q9mep5mp57jisj6vdtoe.apps.googleusercontent.com",
+              "client_id": "1037537162526-2t1s5uc3i37ukbuqvdgkevav92t8dfc0.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

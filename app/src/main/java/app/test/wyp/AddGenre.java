@@ -33,7 +33,7 @@ public class AddGenre extends AppCompatActivity {
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddGenre.this, MainActivity.class);
+                Intent intent = new Intent(AddGenre.this, HomeApp.class);
                 startActivity(intent);
             }
         });

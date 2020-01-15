@@ -65,7 +65,7 @@ public class AddName extends AppCompatActivity {
             return;
         }
 
-        FirebaseUser user = mAuth.getCurrentUser();
+        final FirebaseUser user = mAuth.getCurrentUser();
 
         if (user!= null){
             UserProfileChangeRequest profile = new UserProfileChangeRequest.Builder().setDisplayName(name).build();

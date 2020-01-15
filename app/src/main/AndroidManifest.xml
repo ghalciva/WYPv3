@@ -15,6 +15,7 @@
         <activity android:name="app.test.wyp.AddName"/>
         <activity android:name="app.test.wyp.AddGenre"/>
         <activity android:name="app.test.wyp.AddPhone"/>
+        <activity android:name="app.test.wyp.HomeApp"/>
         <activity android:name="app.test.wyp.AddCodeVerify"/>
 
         <activity android:name="app.test.wyp.SplashActivity">

@@ -33,7 +33,7 @@
             android:layout_height="87dp"
             android:background="@drawable/style_iconbtn"
             android:tint="@color/colorApp"
-            app:srcCompat="?attr/homeAsUpIndicator" />
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
 
         <ImageButton
             android:id="@+id/btnQuestion"
@@ -92,17 +92,19 @@
             android:layout_marginStart="-70sp"
             android:layout_marginTop="70sp"
             android:background="@drawable/style_button"
-            android:drawableEnd="@mipmap/icon_next"
             android:ems="10"
-            android:fontFamily="@font/raleway"
             android:paddingTop="20sp"
             android:paddingBottom="20sp"
-            android:text="SIGUIENTE"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="#5B9898"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_arrow_forward_black_24dp"
+            android:fontFamily="@font/raleway"
+            android:paddingLeft="25sp"
+            android:paddingRight="30sp"
+            android:text="SIGUIENTE"/>
 
     </LinearLayout>
 
