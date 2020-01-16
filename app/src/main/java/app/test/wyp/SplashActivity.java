@@ -29,7 +29,6 @@ public class SplashActivity extends AppCompatActivity {
             };
 
         }, DURACION_SPLASH);
-        getSupportActionBar().hide();
     }
 
 

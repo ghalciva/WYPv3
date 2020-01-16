@@ -76,7 +76,6 @@ public class AddGenre extends AppCompatActivity {
             }
         });
 
-        getSupportActionBar().hide();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 }

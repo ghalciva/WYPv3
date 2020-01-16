@@ -3,5 +3,7 @@
     <color name="colorPrimary">#021C36</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="colorApp">#5B9898</color>
+    <color name="colorApp">#228B74</color>
+    <color name="colorGradient">#CC020202</color>
+    <color name="colorBar">#2A2A2A</color>
 </resources>

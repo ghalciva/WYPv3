@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        getSupportActionBar().hide();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
     }

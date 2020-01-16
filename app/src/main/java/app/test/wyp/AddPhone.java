@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.auth.FirebaseAuth;
 
 public class AddPhone extends AppCompatActivity {
 
@@ -32,13 +31,13 @@ public class AddPhone extends AppCompatActivity {
             public void onClick(View v) {
                 String code= "593";
                 String number = txtaddphone.getText().toString().trim();
-
+/*
                 if (number.isEmpty() || number.length() < 10) {
                     txtaddphone.setError("Ingrese un número de teléfono válido");
                     txtaddphone.requestFocus();
                     return;
                 }
-
+*/
                 String phonenumber = "+" + code + number;
 
                 Intent intent = new Intent(AddPhone.this, AddCodeVerify.class);
@@ -55,21 +54,8 @@ public class AddPhone extends AppCompatActivity {
             }
         });
 
-        getSupportActionBar().hide();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        if (FirebaseAuth.getInstance().getCurrentUser() != null) {
-            Intent intent = new Intent(this, HomeApp.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-
-            startActivity(intent);
-        }
     }
 
 }
