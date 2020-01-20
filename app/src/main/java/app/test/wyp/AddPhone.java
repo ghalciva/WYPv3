@@ -23,7 +23,6 @@ public class AddPhone extends AppCompatActivity {
         setContentView(R.layout.activity_addphone);
 
         btnSiguiente = findViewById(R.id.bntSiguiente);
-        btnBack = findViewById(R.id.btnBack);
         txtaddphone = findViewById(R.id.txtaddphone);
 
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
@@ -44,13 +43,6 @@ public class AddPhone extends AppCompatActivity {
                 intent.putExtra("phonenumber", phonenumber);
                 startActivity(intent);
 
-            }
-        });
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AddPhone.this, MainActivity.class);
-                startActivity(intent);
             }
         });
 

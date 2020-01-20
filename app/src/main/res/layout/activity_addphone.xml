@@ -28,19 +28,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/btnBack"
-            android:layout_width="59dp"
-            android:layout_height="59dp"
-            android:layout_marginTop="30sp"
-            android:background="@drawable/style_iconbtn"
-            android:tint="@color/colorApp"
-            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
-
-        <ImageButton
             android:id="@+id/btnQuestion"
             android:layout_width="59dp"
             android:layout_height="59dp"
-            android:layout_marginStart="165sp"
+            android:layout_marginStart="225sp"
             android:layout_marginTop="30sp"
             android:background="@drawable/style_iconbtn"
             android:tint="@color/colorApp"
