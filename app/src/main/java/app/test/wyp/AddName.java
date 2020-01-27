@@ -35,7 +35,7 @@ public class AddName extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddName.this, MainActivity.class);
+                Intent intent = new Intent(AddName.this, AddPhone.class);
                 startActivity(intent);
             }
         });
