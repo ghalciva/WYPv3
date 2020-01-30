@@ -3,13 +3,13 @@ package app.test.wyp;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 
 public class AddPhone extends AppCompatActivity {
 
@@ -37,8 +37,10 @@ public class AddPhone extends AppCompatActivity {
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String code= "593";
+    //            String code= "593";
+
                 String number = txtaddphone.getText().toString().trim();
+                comprobarCampo(number);
 /*
                 if (number.isEmpty() || number.length() < 10) {
                     txtaddphone.setError("Ingrese un número de teléfono válido");
@@ -46,16 +48,34 @@ public class AddPhone extends AppCompatActivity {
                     return;
                 }
 */
-                String phonenumber = "+" + code + number;
 
-                Intent intent = new Intent(AddPhone.this, AddCodeVerify.class);
-                intent.putExtra("phonenumber", phonenumber);
-                startActivity(intent);
+                //String phonenumber = "+" + code + number;
 
             }
         });
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+    }
+
+    private void comprobarCampo(String number){
+
+        boolean cancel = false;
+        View focusView = null;
+
+        if (TextUtils.isEmpty(number)) {
+            /**Envia el error a la caja de Texto*/
+            txtaddphone.setError("");
+            txtaddphone.setError("Ingrese un número de teléfono");
+            focusView = txtaddphone;
+            cancel = true;
+        }
+
+        if (!TextUtils.isEmpty(number)){
+            Intent intent = new Intent(AddPhone.this, AddName.class);
+            intent.putExtra("phone", number);
+            startActivity(intent);
+        }
 
     }
 

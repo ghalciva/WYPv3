@@ -15,6 +15,7 @@ public class HomeApp extends AppCompatActivity {
 
     private Toolbar toolbar;
     TextView txtExplorar;
+    TextView txtUserMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,13 @@ public class HomeApp extends AppCompatActivity {
 
         //toolbar = findViewById(R.id.toolbar);
         //setActionBar(toolbar);
+
+        txtUserMessage = findViewById(R.id.txtUserMessage);
+
+
+        Bundle bundle = getIntent().getExtras();
+        String dato = bundle.getString("user_name").toString();
+        txtUserMessage.setText("¡Hola, "+dato+"!");
 
         txtExplorar = findViewById(R.id.textView2);
         txtExplorar.setOnClickListener(new View.OnClickListener() {

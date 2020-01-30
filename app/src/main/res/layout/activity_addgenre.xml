@@ -81,7 +81,6 @@
             android:background="@drawable/style_txt"
             android:backgroundTint="#FFFFFF"
             android:button="@android:color/black"
-            android:checked="true"
             android:drawableRight="@drawable/style_checkbutton"
             android:duplicateParentState="true"
             android:ems="14"
