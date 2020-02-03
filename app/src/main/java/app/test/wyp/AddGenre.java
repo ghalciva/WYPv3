@@ -64,14 +64,19 @@ public class AddGenre extends AppCompatActivity {
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                guardarDatos(number, name, sexo);
 
-                Intent intent = new Intent(AddGenre.this, HomeApp.class);
-                intent.putExtra("phone", number);
-                intent.putExtra("user_name", name);
-                intent.putExtra("genre", sexo);
+                if(cbxmale.isChecked() || cbxfemale.isChecked() || cbxother.isChecked()){
+                    guardarDatos(number, name, sexo);
 
-                startActivity(intent);
+                    Intent intent = new Intent(AddGenre.this, HomeApp.class);
+                    intent.putExtra("phone", number);
+                    intent.putExtra("user_name", name);
+                    intent.putExtra("genre", sexo);
+
+                    startActivity(intent);
+                }else {
+                    Toast.makeText(getApplicationContext(), "Seleccione una opción para continuar", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -159,8 +164,6 @@ public class AddGenre extends AppCompatActivity {
         thread.start();
 
     }
-
-
 
 
 }

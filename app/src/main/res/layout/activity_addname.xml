@@ -82,9 +82,10 @@
             android:background="@drawable/style_txt"
             android:backgroundTint="#FCFFFFFF"
             android:ems="13"
+            android:digits="abcdefghijklmnñopqrstuvwxyzáéíóúü ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚÜ"
             android:fontFamily="@font/raleway"
             android:hint="Nombre completo"
-            android:inputType="textPersonName"
+            android:inputType="textPersonName|text"
             android:textSize="14sp" />
 
         <Button
