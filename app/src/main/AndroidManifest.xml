@@ -2,8 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.test.wyp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-feature android:name="android.hardware.sensor.accelerometer"
+        android:required="true"/>
 
     <application
         android:allowBackup="true"
@@ -12,25 +21,54 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="app.test.wyp.MainActivity"/>
-        <activity android:name="app.test.wyp.AddName"/>
-        <activity android:name="app.test.wyp.AddGenre"/>
-        <activity android:name="app.test.wyp.AddPhone"/>
-        <activity android:name="app.test.wyp.HomeApp" />
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
         <activity
-            android:name="app.test.wyp.Explorar"
-            android:parentActivityName="app.test.wyp.HomeApp"/>
-        <activity android:name="app.test.wyp.Search"/>
-        <activity android:name="app.test.wyp.AddCodeVerify"/>
-        <activity android:name="app.test.wyp.SplashActivity">
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".AddName" />
+        <activity android:name=".AddGenre" />
+        <activity android:name=".AddPhone" />
+        <activity android:name=".More" />
+        <activity android:name=".Evento"/>
+        <activity android:name=".HomeApp"
+            android:noHistory="true"/>
+        <activity
+            android:name=".Explorar"
+            android:parentActivityName=".HomeApp" />
+        <activity android:name=".Search" />
+        <activity android:name=".AddCodeVerify" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".NetworkStateChecker">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
+
 
 </manifest>

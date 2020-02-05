@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     tools:context=".Search">
 
     <include
@@ -18,38 +19,27 @@
 
         <LinearLayout
             android:id="@+id/layout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/fiestasCasa"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-25sp"
-                app:srcCompat="@mipmap/fiesta1" />
+                android:layout_height="199dp"
+                app:srcCompat="@mipmap/homeparty" />
 
-            <View
-                android:id="@+id/view"
+            <ImageView
+                android:id="@+id/eventosPublicos"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-270sp"
-                android:background="@mipmap/fondo1" />
+                android:layout_height="199dp"
+                app:srcCompat="@mipmap/publicevent" />
 
-            <TextView
-                android:id="@+id/textView"
+            <ImageView
+                android:id="@+id/otros"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20sp"
-                android:layout_marginTop="-130sp"
-                android:layout_marginEnd="20sp"
-                android:fontFamily="@font/raleway_medium"
-                android:text="Fiestas en casa"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="#FFFFFF"
-                android:textSize="36sp"
-                android:textStyle="bold" />
+                android:layout_height="199dp"
+                app:srcCompat="@mipmap/others" />
 
 
         </LinearLayout>

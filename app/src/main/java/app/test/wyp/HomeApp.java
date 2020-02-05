@@ -22,14 +22,10 @@ public class HomeApp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homeapp);
 
-        //toolbar = findViewById(R.id.toolbar);
-        //setActionBar(toolbar);
-
         txtUserMessage = findViewById(R.id.txtUserMessage);
 
-
         Bundle bundle = getIntent().getExtras();
-        String dato = bundle.getString("user_name").toString();
+        final String dato = bundle.getString("user_name").toString();
         txtUserMessage.setText("¡Hola, "+dato+"!");
 
         txtExplorar = findViewById(R.id.textView2);
@@ -37,6 +33,7 @@ public class HomeApp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeApp.this, Explorar.class);
+                intent.putExtra("user_name", dato);
                 startActivity(intent);
             }
         });

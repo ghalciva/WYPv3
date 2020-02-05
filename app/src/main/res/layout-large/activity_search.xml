@@ -27,14 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-25sp"
-                app:srcCompat="@mipmap/fiesta1" />
-
-            <View
-                android:id="@+id/view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-270sp"
-                android:background="@mipmap/fondo1" />
+                app:srcCompat="@mipmap/homeparty" />
 
             <TextView
                 android:id="@+id/textView"

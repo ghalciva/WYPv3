@@ -43,6 +43,7 @@
             android:backgroundTint="@android:color/transparent"
             android:paddingLeft="40sp"
             android:src="@drawable/ic_more_horiz_black_24dp" />
+
     </LinearLayout>
 
 </com.google.android.material.bottomnavigation.BottomNavigationView>

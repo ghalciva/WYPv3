@@ -1,9 +1,12 @@
 package app.test.wyp;
 
+import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
-import android.net.Uri;
-import android.os.AsyncTask;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,32 +15,25 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.Toast;
-
-import java.io.BufferedWriter;
 import java.io.DataOutputStream;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
+import java.util.ArrayList;
+import java.util.List;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import javax.net.ssl.HttpsURLConnection;
 
 public class AddGenre extends AppCompatActivity {
+
+    public static final int NAME_SYNCED_WITH_SERVER = 1;
+    public static final int NAME_NOT_SYNCED_WITH_SERVER = 0;
+    public static final String DATA_SAVED_BROADCAST = "app.test.datasaved";
+    private BroadcastReceiver broadcastReceiver;
+    private DatabaseHelper db;
+
+    private List<ModelUser> users;
 
     Button btnSiguiente;
     ImageButton btnBack;
@@ -51,11 +47,27 @@ public class AddGenre extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addgenre);
 
+        users = new ArrayList<>();
+
         btnSiguiente = findViewById(R.id.bntSiguiente);
         btnBack = findViewById(R.id.btnBack);
         cbxmale = findViewById(R.id.cbxmale);
         cbxfemale = findViewById(R.id.cbxfemale);
         cbxother = findViewById(R.id.cbxother);
+
+        db = new DatabaseHelper(this);
+
+        registerReceiver(new NetworkStateChecker(), new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+        //the broadcast receiver to update sync status
+        broadcastReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                Toast.makeText(getApplicationContext(),"in the receiver",Toast.LENGTH_LONG).show();
+            }
+        };
+        //registering the broadcast receiver to update sync status
+        registerReceiver(broadcastReceiver, new IntentFilter(DATA_SAVED_BROADCAST));
+        unregisterReceiver(broadcastReceiver);
 
         Bundle bundle = getIntent().getExtras();
         final String number = bundle.getString("phone").toString();
@@ -126,8 +138,7 @@ public class AddGenre extends AppCompatActivity {
 
     private void guardarDatos(final String number, final String name, final String sexo) {
 
-        //URL url= new URL("https://db-node-api.herokuapp.com/api/users");
-        Thread thread = new Thread(new Runnable() {
+        /*Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
@@ -162,8 +173,24 @@ public class AddGenre extends AppCompatActivity {
         });
 
         thread.start();
+        */
+
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Guardando sus datos...");
+        progressDialog.show();
+        progressDialog.setCancelable(false);
+        saveNameToLocalStorage(number, name, sexo, NAME_NOT_SYNCED_WITH_SERVER);
+        progressDialog.dismiss();
 
     }
+
+    //saving the name to local storage
+    private void saveNameToLocalStorage(String phone, String name, String genre, int status) {
+        db.addName(phone, name, genre, status);
+        ModelUser n = new ModelUser(phone,name, genre,status);
+        users.add(n);
+    }
+
 
 
 }
