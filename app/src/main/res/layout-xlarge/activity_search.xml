@@ -26,19 +26,19 @@
             <ImageView
                 android:id="@+id/fiestasCasa"
                 android:layout_width="match_parent"
-                android:layout_height="331dp"
+                android:layout_height="425dp"
                 app:srcCompat="@mipmap/homeparty" />
 
             <ImageView
                 android:id="@+id/eventosPublicos"
                 android:layout_width="match_parent"
-                android:layout_height="331dp"
+                android:layout_height="425dp"
                 app:srcCompat="@mipmap/publicevent" />
 
             <ImageView
                 android:id="@+id/otros"
                 android:layout_width="match_parent"
-                android:layout_height="331dp"
+                android:layout_height="425dp"
                 app:srcCompat="@mipmap/others" />
 
 

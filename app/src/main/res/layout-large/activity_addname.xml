@@ -18,8 +18,8 @@
         app:srcCompat="@mipmap/bgaddname" />
 
     <LinearLayout
-        android:layout_width="436dp"
-        android:layout_height="855dp"
+        android:layout_width="286dp"
+        android:layout_height="0dp"
         android:layout_marginTop="100dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,17 +29,19 @@
 
         <ImageButton
             android:id="@+id/btnBack"
-            android:layout_width="87dp"
-            android:layout_height="87dp"
+            android:layout_width="59dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="30sp"
             android:background="@drawable/style_iconbtn"
             android:tint="@color/colorApp"
             app:srcCompat="?attr/homeAsUpIndicator" />
 
         <ImageButton
             android:id="@+id/btnQuestion"
-            android:layout_width="87dp"
-            android:layout_height="87dp"
-            android:layout_marginStart="262sp"
+            android:layout_width="59dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="165sp"
+            android:layout_marginTop="30sp"
             android:background="@drawable/style_iconbtn"
             android:tint="@color/colorApp"
             app:srcCompat="@mipmap/icon_search" />
@@ -48,7 +50,7 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="370dp"
         android:layout_marginTop="50dp"
         android:gravity="center|top"
         android:orientation="vertical"
@@ -59,48 +61,47 @@
 
         <TextView
             android:id="@+id/txtUserMessage"
-            android:layout_width="314dp"
+            android:layout_width="254dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="-25sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10sp"
             android:fontFamily="@font/raleway_medium"
             android:lineSpacingExtra="-10sp"
             android:text="¿Cuál es tu nombre?"
             android:textAlignment="viewStart"
             android:textColor="#FFFFFF"
-            android:textSize="56sp"
+            android:textSize="36sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/txtaddphone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="-10sp"
-            android:layout_marginTop="70sp"
+            android:layout_marginStart="-5sp"
+            android:layout_marginTop="50sp"
             android:background="@drawable/style_txt"
             android:backgroundTint="#FCFFFFFF"
             android:ems="13"
+            android:digits="abcdefghijklmnñopqrstuvwxyzáéíóúü ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚÜ"
             android:fontFamily="@font/raleway"
             android:hint="Nombre completo"
-            android:inputType="textPersonName"
-            android:textSize="22sp" />
+            android:inputType="textPersonName|text"
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/bntSiguiente"
-            android:layout_width="wrap_content"
+            android:layout_width="151dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="-70sp"
-            android:layout_marginTop="70sp"
+            android:layout_marginStart="-35sp"
+            android:layout_marginTop="50sp"
             android:background="@drawable/style_button"
-            android:drawableEnd="@mipmap/icon_next"
-            android:ems="10"
+            android:drawableRight="@mipmap/icon_next"
             android:fontFamily="@font/raleway"
-            android:paddingTop="20sp"
-            android:paddingBottom="20sp"
             android:text="SIGUIENTE"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="#5B9898"
-            android:textSize="18sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
     </LinearLayout>
 
